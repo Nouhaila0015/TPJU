@@ -2,11 +2,15 @@ package fusion;
 
 import classesPeintureCelebre.ToileDePeintureCelebre;
 import classesSuperHero.SuperHero;
+import interfaces.IObservateur;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class ProtectionOeuvre {
+/**
+ * 📌 Un super-héros peut être affecté à la protection d’une œuvre d’art dans un musée.
+ * */
+public class ProtectionOeuvre implements IObservateur {
     private Map<ToileDePeintureCelebre, SuperHero> protectionMap;
 
     public ProtectionOeuvre() {
@@ -16,6 +20,12 @@ public class ProtectionOeuvre {
     public void assignerProtection(SuperHero hero, ToileDePeintureCelebre oeuvre) {
         protectionMap.put(oeuvre, hero);
         System.out.println("🛡️ " + hero.getNom() + " protège désormais " + oeuvre.getNom() + " !");
+        miseAJour("Protection assignée : " + oeuvre.getNom() + " par " + hero.getNom());
+    }
+
+    @Override
+    public void miseAJour(String message) {
+        System.out.println("🔔 [Système de Protection] " + message);
     }
 
     public void afficherProtections() {
