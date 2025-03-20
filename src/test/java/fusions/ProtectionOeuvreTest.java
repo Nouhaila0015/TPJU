@@ -11,7 +11,7 @@ import java.io.PrintStream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ProtectionOeuvreTest {
+public class ProtectionOeuvreTest {//gère l’assignation des super-héros à la protection des œuvres.
     private ProtectionOeuvre protection;
     private SuperHero ironMan;
     private ToileDePeintureCelebre leCri;
@@ -26,14 +26,14 @@ public class ProtectionOeuvreTest {
     }
 
     @Test
-    void testAssignerProtection() {
+    void testAssignerProtection() { //Vérifie que l'assignation d’un super-héros à une œuvre fonctionne bien.
         protection.assignerProtection(ironMan, leCri);
         String expectedOutput = "🛡️ Iron Man protège désormais Le Cri !\n🔔 [Système de Protection] Protection assignée : Le Cri par Iron Man";
         assertEquals(expectedOutput.trim(), outputStreamCaptor.toString().trim(), "Le message d'assignation de protection doit être correct.");
     }
 
     @Test
-    void testAfficherProtections() {
+    void testAfficherProtections() { //Vérifie l'affichage des protections en listant les œuvres protégées.
         // Affectation d'une protection
         protection.assignerProtection(ironMan, leCri);
 
