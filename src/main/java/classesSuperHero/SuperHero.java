@@ -1,6 +1,8 @@
 package classesSuperHero;
 
-public class SuperHero {
+import interfaces.IComposantArt;
+
+public class SuperHero implements IComposantArt {
     // Variables d'instance
     private String nom;
     private int niveau;
@@ -83,6 +85,7 @@ public class SuperHero {
     /**
      * Affiche les informations du super-héros
      */
+    @Override
     public String afficherInfos() {
         String equipeNom = (equipe != null) ? equipe.getNomEquipe() : "Aucune équipe";
         return "Superhéros : " + this.nom + " | Niveau : " + this.niveau + " | Équipe : " + equipeNom;

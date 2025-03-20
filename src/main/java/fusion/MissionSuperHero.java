@@ -25,7 +25,7 @@ public class MissionSuperHero implements IComposantArt {
     }
 
     @Override
-    public String afficherDetails() {
+    public String afficherInfos() {
         return "📜 Mission : " + hero.getNom() + " protège " + oeuvre.getNom() + " | Succès : " + (missionReussie ? "✅" : "❌");
     }
 

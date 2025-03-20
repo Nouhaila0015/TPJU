@@ -1,10 +1,12 @@
 package classesPeintureCelebre;
 
+import interfaces.IComposantArt;
+
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class CollectionArt {
+public class CollectionArt implements IComposantArt {
 
     private String nomCollection;
     private List<ToileDePeintureCelebre> toiles; // Une collection peut contenir plusieurs toiles
@@ -31,7 +33,8 @@ public class CollectionArt {
 
 
     // Méthode collaborant avec ToileDePeintureCelebre
-    public String afficherDetailsCollection() {
+    @Override
+    public String afficherInfos() {
         StringBuilder details = new StringBuilder("Collection : " + nomCollection + "\n");
         if (!toiles.isEmpty()) {
             for (ToileDePeintureCelebre toile : toiles) {
