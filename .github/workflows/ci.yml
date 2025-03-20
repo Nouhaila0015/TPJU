@@ -1,0 +1,32 @@
+name: Java CI/CD - Tests Automatiques
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Cloner le code
+        uses: actions/checkout@v3
+
+      - name: 🔧 Installer Java et Maven
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: 🏗️ Compiler le projet
+        run: mvn clean install
+
+      - name: 🛠️ Exécuter les tests unitaires
+        run: mvn test
+
+      - name: ✅ Exécuter les tests fonctionnels avec Cucumber
+        run: mvn test -Dcucumber.features=src/test/resources/features
