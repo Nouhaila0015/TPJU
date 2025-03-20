@@ -1,4 +1,4 @@
-package classes;
+package classesSuperHero;
 
 public class SuperHero {
     // Variables d'instance

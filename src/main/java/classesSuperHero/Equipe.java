@@ -1,4 +1,4 @@
-package classes;
+package classesSuperHero;
 
 import java.util.ArrayList;
 import java.util.List;
