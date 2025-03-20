@@ -9,7 +9,7 @@ import io.cucumber.java.en.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class ProtectionRecuperationSteps {
+public class ProtectionRecuperationSteps { //implémente chaque étape du scénario en Java.
     private SuperHero superHero;
     private ToileDePeintureCelebre oeuvre;
     private ProtectionOeuvre protection;
