@@ -1,7 +1,7 @@
 package steps;
 
-import classes.Equipe;
-import classes.SuperHero;
+import classesSuperHero.Equipe;
+import classesSuperHero.SuperHero;
 import io.cucumber.java.en.*;
 import static org.junit.jupiter.api.Assertions.*;
 

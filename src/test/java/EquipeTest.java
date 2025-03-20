@@ -1,6 +1,6 @@
 
-import classes.Equipe;
-import classes.SuperHero;
+import classesSuperHero.Equipe;
+import classesSuperHero.SuperHero;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
