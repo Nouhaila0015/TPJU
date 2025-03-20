@@ -29,9 +29,18 @@ public class ProtectionOeuvre implements IObservateur {
     }
 
     public void afficherProtections() {
-        System.out.println("🔐 Liste des œuvres protégées :");
+        StringBuilder sb = new StringBuilder("Liste des oeuvres protégées : ");
+
+        boolean first = true;
         for (Map.Entry<ToileDePeintureCelebre, SuperHero> entry : protectionMap.entrySet()) {
-            System.out.println("🎨 " + entry.getKey().getNom() + " est protégé par 🦸‍♂️ " + entry.getValue().getNom());
+            if (!first) {
+                sb.append(", ");
+            } else {
+                first = false;
+            }
+            sb.append(entry.getKey().getNom()).append(" est protégé par ").append(entry.getValue().getNom());
         }
+
+        System.out.print(sb.toString());
     }
 }
