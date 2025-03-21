@@ -13,6 +13,7 @@ import java.util.Map;
 public class ProtectionOeuvre implements IObservateur {
     private Map<ToileDePeintureCelebre, SuperHero> protectionMap;
 
+
     public ProtectionOeuvre() {
         this.protectionMap = new HashMap<>();
     }
